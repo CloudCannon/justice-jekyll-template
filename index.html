@@ -1,0 +1,31 @@
+---
+title:
+call_to_action: Contact
+background_image_path:
+large_header: true
+testimonials:
+  - message: We use Justice Law in all our endeavours. They offer an unparalleled service when it comes to running a business.
+    image: "//placekitten.com/60/60?a=.png"
+    name: Joice Carmold
+  - message: Justice Law are the best of the best. Being local, they care about people and have strong ties to the community.
+    image: "//fillmurray.com/60/60?a=.png"
+    name: Peter Rottenburg
+  - message: Justice Law were everything we could have hoped for when buying our first home. Highly recommended to all.
+    image: "//placebear.com/60/60?a=.png"
+    name: D. and G. Gibbleston
+---
+
+<div class="editable">
+	<p>This is the <strong>Justice</strong> template from <a href="http://cloudcannon.com/">CloudCannon</a>. Justice is strong foundation for the web presence of a law firm or business. It's filled with fictitious example content to get you started.</p>
+
+	<p>Justice Law is professional representation. Practicing for over 50 years, our team have the knowledge and skills to get you results.</p>
+</div>
+
+<div class="testimonials">
+	{% for testimonial in page.testimonials %}
+		<blockquote class="testimonial">
+			<p class="testimonial-message">{{ testimonial.message }}</p>
+			<p class="testimonial-author"><img src="{% include relative-src.html src=testimonial.image %}" alt="Photo of {{ testimonial.name }}"> {{ testimonial.name }}</p>
+		</blockquote>
+	{% endfor %}
+</div>

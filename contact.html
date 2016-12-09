@@ -1,0 +1,85 @@
+---
+title: Contact
+call_to_action: Map
+background_image_path:
+large_header: false
+show_in_navigation: true
+navigation_order: 3
+map:
+  latitude: -45.8787605
+  longitude: 170.5027976
+  zoom: 13
+---
+
+<p class="editable">
+	Come see us in person, give us a call, or send us a message with your details and we'll be in contact shortly after. No obligations and your first meeting is free.
+</p>
+
+<div class="columns">
+	<div class="column">
+		<p class="editor-link"><a href="cloudcannon:collections/_data/company.yml" class="btn"><strong>&#9998;</strong> Update Company Details</a></p>
+
+		<label>Phone Number</label>
+		<p class="contact-info"><a href="tel:{{ site.data.company.contact_phone_number }}">{{ site.data.company.contact_phone_number }}</a></p>
+
+		<label>Email Address</label>
+		<p class="contact-info"><a href="mailto:{{ site.data.company.contact_email_address }}">{{ site.data.company.contact_email_address }}</a></p>
+
+		<label>Postal Address</label>
+		<address class="contact-info">{{ site.data.company.postal_address | replace: ',', '<br>' }}</address>
+		<label>Address</label>
+		<address class="contact-info">{{ site.data.company.address | replace: ',', '<br>' }}</address>
+	</div>
+
+	<div class="column">
+		<form method="post" action="/success.html">
+			<label for="email_address">Email Address</label>
+			<input id="email_address"type="text" name="email">
+
+			<label for="name">Name</label>
+			<input id="name" type="text" name="name">
+
+			<label for="message">Message</label>
+			<textarea id="message" name="message"></textarea>
+
+			<input type="hidden" name="_to" value="{{ site.data.company.contact_email_address }}">
+			<input type="text" name="_gotcha" style="display: none;">
+
+			<input type="submit" value="Send Message">
+		</form>
+	</div>
+</div>
+
+
+{% if site.google_maps_javascript_api_key and page.call_to_action == 'Map' %}
+	<script>
+		window.mapData = {{ page.map | jsonify }};
+
+		function initMap() {
+			var myOptions = {
+				scrollwheel: false,
+				draggable: false,
+				panControl: false,
+				disableDefaultUI: true,
+				styles: [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}],
+				zoom: window.mapData.zoom,
+				maxZoom: window.mapData.zoom,
+				minZoom: window.mapData.zoom,
+				center: new google.maps.LatLng(window.mapData.latitude, window.mapData.longitude),
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+
+			var map = new google.maps.Map(document.getElementById('map'), myOptions);
+
+			var marker = new google.maps.Marker({
+				map: map,
+				position: new google.maps.LatLng(window.mapData.latitude, window.mapData.longitude)
+			});
+
+			google.maps.event.addDomListener(window, 'resize', function() {
+				map.setCenter(myOptions.center);
+			});
+		}
+	</script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key={{ site.google_maps_javascript_api_key }}&amp;callback=initMap"></script>
+{% endif %}

@@ -1,0 +1,43 @@
+label {
+	display: block;
+	letter-spacing: 4px;
+	font-size: 1.5rem;
+}
+
+.btn,
+input,
+textarea {
+	padding: 10px;
+	margin: 10px 0;
+	box-shadow: 1px 1px 5px 0 rgba(100, 100, 100, 0.2);
+	border: 0;
+	border-radius: 2px;
+	width: 100%;
+	max-width: 500px;
+	margin: 0 0 20px 0;
+	box-sizing: border-box;
+	font-size: 2rem;
+}
+
+textarea {
+	min-height: 250px;
+}
+
+input[type=submit] {
+	display: block;
+}
+
+input[type=submit],
+.btn {
+	padding: 10px 15px;
+	margin: 0;
+	background-color: #4489b1;
+	font-size: 2rem;
+	color: #fefefe;
+	cursor: pointer;
+
+	&:hover {
+		color: #fefefe;
+		background-color: #73a9c9;
+	}
+}

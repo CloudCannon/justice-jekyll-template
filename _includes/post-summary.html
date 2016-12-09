@@ -1,0 +1,20 @@
+<li class="post-summary">
+	{% if include.post.image %}
+		<div class="post-summary-image">
+			<img src="{% include relative-src.html src=include.post.image %}" alt="Photo of {{ include.post.title }}">
+		</div>
+	{% endif %}
+
+	<div class="post-summary-content {% if include.post.image %}has-post-summary-image{% endif %}">
+		<h3 class="post-summary-title"><a href="{{ site.baseurl }}{{ include.post.url }}">{{ include.post.title }}</a></h3>
+		{% include post-summary-details.html post=include.post %}
+
+		{% assign author_id = include.post.author_staff_member | prepend: "/staff_members/" | append: "/" %}
+		{% assign author = site.staff_members | where: "url", author_id | first %}
+		<p class="post-summary-author">
+			<img src="{% include relative-src.html src=author.image %}" alt="Photo of {{ author.name }}" width="30" height="30"> {{ author.name }}
+		</p>
+	</div>
+
+	<p class="post-summary-excerpt">{{ include.post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
+</li>

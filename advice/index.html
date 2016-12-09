@@ -1,0 +1,36 @@
+---
+title: Advice
+call_to_action: Contact
+background_image_path:
+large_header: false
+show_in_navigation: true
+navigation_order: 4
+---
+
+<p class="editable">Get an introduction to some industry topics and stay informed with our in-depth advice articles.</p>
+
+<p class="editor-link"><a href="cloudcannon:collections/_posts" class="btn"><strong>&#9998;</strong> Update Advice Posts</a></p>
+
+<ol class="post-list">
+	{% for post in paginator.posts %}
+		{% include post-summary.html post=post %}
+	{% endfor %}
+</ol>
+
+{% if paginator.total_pages > 1 %}
+	<div class="pagination">
+		{% if paginator.previous_page %}
+			<a href="{{ site.baseurl }}{{ paginator.previous_page_path }}" class="previous btn">&larr; Newer</a>
+		{% elsif paginator.next_page %}
+			<span></span>
+		{% endif %}
+
+		<span>{{ paginator.page }} of {{ paginator.total_pages }}</span>
+
+		{% if paginator.next_page %}
+			<a href="{{ site.baseurl }}{{ paginator.next_page_path }}" class="next btn">Older &rarr;</a>
+		{% elsif paginator.previous_page %}
+			<span></span>
+		{% endif %}
+	</div>
+{% endif %}

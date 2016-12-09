@@ -1,0 +1,101 @@
+# ----
+# Site
+
+title: Justice Template
+url: "https://orchid-heron.cloudvent.net"
+baseurl:
+google_analytics_key:
+google_maps_javascript_api_key:
+disqus_shortname:
+
+# Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
+logo: /siteicon.png
+description: Jekyll template with example content for a law firm.
+author:
+  name:
+  email:
+  twitter: # twitter username without the @ symbol
+social:
+  name: Justice Template
+  links:
+    - https://github.com/CloudCannon/justice-jekyll-template
+
+# -----
+# Build
+
+paginate: 10
+paginate_path: "/advice/:num/"
+
+collections:
+  - "staff_members"
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: page
+      background_image_path: /uploads/building.jpg
+      image: /uploads/building.jpg
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      _comments:
+        image: Shown in social shares and the advice list.
+
+permalink: pretty
+
+jekyll-archives:
+  enabled:
+    - categories
+
+gems:
+  - jekyll-archives
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-paginate
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENCE
+
+# -----------
+# CloudCannon
+
+call_to_actions:
+  - Contact
+  - Advice
+  - Map
+
+social_icons:
+  - Facebook
+  - Google Plus
+  - Instagram
+  - LinkedIn
+  - Pinterest
+  - Tumblr
+  - Twitter
+  - YouTube
+  - RSS
+
+_comments:
+  large_header: Toggles the size of the top banner.
+  show_in_navigation: Toggles a link in the top banner.
+  author_staff_member: The staff member writing this post.
+  call_to_action: Type of request shown at the bottom of this page.
+  background_image_path: Image shown in the top banner, blank for the default.
+  testimonials: Update, add or remove testimonials.
+  map: Update the map location and display settings.
+  latitude: Coordinates for the center marker on the map.
+  longitude: Coordinates for the center marker on the map.
+  zoom: The zoom level for the map.
+  phone_extension: The digits after dialing the company phone.
+  credentials: Shown as subtext on staff member summaries.
+  contact_email_address: Address for the contact form to send to.
+  new_window: Whether the link opens a new browser tab/window.
