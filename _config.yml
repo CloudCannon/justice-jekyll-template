@@ -43,8 +43,21 @@ defaults:
       type: "posts"
     values:
       layout: post
+      _options:
+        content:
+          width: 960
+          height: 2000
       _comments:
         image: Shown in social shares and the advice list.
+  -
+    scope:
+      path: ""
+      type: "staff_members"
+    values:
+      _options:
+        image:
+          width: 440
+          height: 440
 
 permalink: pretty
 
