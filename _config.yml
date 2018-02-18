@@ -23,6 +23,8 @@ social:
 # -----
 # Build
 
+timezone: Etc/UTC
+
 paginate: 10
 paginate_path: "/advice/:num/"
 
