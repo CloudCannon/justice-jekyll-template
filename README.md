@@ -5,7 +5,7 @@ Increase the web presence of a law firm or business with this configurable theme
 
 ![Justice template screenshot](images/_screenshot.png)
 
-Justice was made by [CloudCannon](http://cloudcannon.com/), the Cloud CMS for Jekyll.
+Justice was made by [CloudCannon](https://cloudcannon.com/), the Cloud CMS for Jekyll.
 
 Find more templates, themes and step-by-step Jekyll tutorials at [CloudCannon Academy](https://learn.cloudcannon.com/).
 
@@ -19,7 +19,7 @@ Find more templates, themes and step-by-step Jekyll tutorials at [CloudCannon Ac
 * Disqus comments for posts
 * Staff and author system
 * Configurable footer
-* Optimised for editing in [CloudCannon](http://cloudcannon.com/)
+* Optimised for editing in [CloudCannon](https://cloudcannon.com/)
 * RSS/Atom feed
 * SEO tags
 * Google Analytics
@@ -32,9 +32,9 @@ Find more templates, themes and step-by-step Jekyll tutorials at [CloudCannon Ac
 
 ## Develop
 
-Justice was built with [Jekyll](http://jekyllrb.com/) version 3.3.1, but should support newer versions as well.
+Justice was built with [Jekyll](https://jekyllrb.com/) version 3.3.1, but should support newer versions as well.
 
-Install the dependencies with [Bundler](http://bundler.io/):
+Install the dependencies with [Bundler](https://bundler.io/):
 
 ~~~bash
 $ bundle install
