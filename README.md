@@ -48,7 +48,7 @@ $ bundle exec jekyll serve
 
 ## Editing
 
-Justice is already optimised for adding, updating and removing pages, staff, advice, company details and footer elements in [CloudCannon](https://app.cloudcannon.com/).
+Justice is already optimised for adding, updating and removing pages, staff, posts, company details and footer elements in [CloudCannon](https://app.cloudcannon.com/).
 
 ### Posts
 

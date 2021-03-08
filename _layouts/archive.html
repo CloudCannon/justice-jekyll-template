@@ -6,12 +6,12 @@ background_image_path:
 
 {% if page.title %}
 	<div class="page-header">
-		<h2>{{ page.title }} Advice</h2>
+		<h2>{{ page.title }} Blog</h2>
 	</div>
 {% endif %}
 
 <article class="content">
-	<p class="editable">You're currently looking at advice categorised under <strong>{{ page.title }}</strong>. <a href="{{ site.baseurl }}/advice/">View all advice</a> instead.</p>
+	<p class="editable">You're currently looking at posts categorised under <strong>{{ page.title }}</strong>. <a href="{{ site.baseurl }}/blog/">View all posts</a> instead.</p>
 
 	<ol class="post-list">
 		{% for post in page.posts %}

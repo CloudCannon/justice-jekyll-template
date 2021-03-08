@@ -3,7 +3,7 @@
 
 title: Justice Template
 url: "https://orchid-heron.cloudvent.net"
-baseurl: 
+baseurl:
 google_analytics_key:
 google_maps_javascript_api_key:
 disqus_shortname:
@@ -26,7 +26,7 @@ social:
 timezone: Etc/UTC
 
 paginate: 10
-paginate_path: "/advice/:num/"
+paginate_path: "/blog/:num/"
 
 collections:
   - "staff_members"
@@ -50,7 +50,7 @@ defaults:
           width: 960
           height: 2000
       _comments:
-        image: Shown in social shares and the advice list.
+        image: Shown in social shares and the blog list.
   -
     scope:
       path: ""
@@ -85,7 +85,7 @@ exclude:
 
 call_to_actions:
   - Contact
-  - Advice
+  - Blog
   - Map
 
 social_icons:
