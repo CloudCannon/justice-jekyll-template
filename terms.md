@@ -1,6 +1,6 @@
 ---
 title: Terms
-cta: Contact
+call_to_action: Contact
 background_image_path:
 large_header: false
 show_in_navigation: false
