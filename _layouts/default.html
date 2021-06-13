@@ -32,7 +32,10 @@
 					<ul>
 						{% assign nav_pages = site.html_pages | where: 'show_in_navigation', true | sort: 'navigation_order' %}
 						{% for nav_page in nav_pages %}
-							<li><a {% if nav_page.url == page.url %}class="active"{% endif %} href="{{ site.baseurl }}{{ nav_page.url }}">{{ nav_page.title }}</a></li>
+							{% if previous_page.path != nav_page.path %}
+								{% assign previous_page = nav_page %}
+								<li><a {% if nav_page.url == page.url %}class="active"{% endif %} href="{{ site.baseurl }}{{ nav_page.url }}">{{ nav_page.title }}</a></li>
+							{% endif %}
 						{% endfor %}
 					</ul>
 				</nav>

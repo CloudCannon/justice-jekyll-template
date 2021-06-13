@@ -54,7 +54,6 @@ Justice is already optimised for adding, updating and removing pages, staff, pos
 
 * Add, update or remove a post in the *Posts* collection.
 * The **Staff Author** field links to members in the **Staff** collection.
-* Documentation pages are organised in the navigation by category, with URLs based on the path inside the `_docs` folder.
 * Change the defaults when new posts are created in `_posts/_defaults.md`.
 
 ### Contact Form
@@ -65,7 +64,6 @@ Justice is already optimised for adding, updating and removing pages, staff, pos
 ### Staff
 
 * Reused around the site to save multiple editing locations.
-* Add `excluded_in_search: true` to any documentation page's front matter to exclude that page in the search results.
 
 ### Footer
 
