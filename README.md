@@ -9,6 +9,8 @@ Justice was made by [CloudCannon](https://cloudcannon.com/), the Cloud CMS for J
 
 Find more templates, themes and step-by-step Jekyll tutorials at [CloudCannon Academy](https://learn.cloudcannon.com/).
 
+[![Deploy to CloudCannon](https://buttons.cloudcannon.com/deploy.svg)](https://app.cloudcannon.com/register#sites/connect/github/CloudCannon/justice-jekyll-template)
+
 ## Features
 
 * Contact form
