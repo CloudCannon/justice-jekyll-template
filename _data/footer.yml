@@ -13,18 +13,10 @@
 - title: Social
   links:
     - name: Facebook
-      link: http://facebook.com/cloudcannon/
+      link: https://www.facebook.com/brianne.evans2
       social_icon: Facebook
       new_window: true
-    - name: Twitter
-      link: http://twitter.com/cloudcannon
-      social_icon: Twitter
-      new_window: true
     - name: Instagram
-      link: http://instagram.com/
+      link: https://www.instagram.com/thegetsh.tdonemom/
       social_icon: Instagram
-      new_window: true
-    - name: LinkedIn
-      link: https://nz.linkedin.com/company/cloud-cannon/
-      social_icon: LinkedIn
       new_window: true
