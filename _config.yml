@@ -16,7 +16,7 @@ author:
   email:
   twitter: # twitter username without the @ symbol
 social:
-  name: Justice Template
+  name: Get Sh*t Done
   links:
     - https://github.com/CloudCannon/justice-jekyll-template
 
@@ -38,7 +38,7 @@ defaults:
     values:
       layout: page
       background_image_path: /uploads/building.jpg
-      image: /uploads/building.jpg
+      image: /uploads/main.png
   -
     scope:
       path: ""
