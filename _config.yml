@@ -37,8 +37,8 @@ defaults:
       path: ""
     values:
       layout: page
-      background_image_path: /uploads/GSDhomepage.jpg
-      image: /uploads/GSDhomepage.jpg
+      background_image_path: /uploads/Homepage1.jpg
+      image: /uploads/Homepage1.jpg
   -
     scope:
       path: ""
