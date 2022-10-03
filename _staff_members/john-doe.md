@@ -1,8 +1,7 @@
 ---
-name: John Doe
+name: The Get Sh*t Done Planner
 image: "//placebear.com/440/440?a=.png"
-credentials: LLB
-phone_extension: "11"
+credentials: The Get Sh*t Done planner...
 ---
 
-With an interest in employment law, John works tirelessly to improve workplaces.
+XYZ
