@@ -2,10 +2,10 @@
   links:
     - name: Home
       link: /
-    - name: About
-      link: /about/
     - name: Start here
       link: /start-here
+      - name: About
+      link: /about/
     - name: Contact
       link: /contact/
 - title: Social
