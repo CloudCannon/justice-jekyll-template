@@ -8,8 +8,6 @@
       link: /services/
     - name: Contact
       link: /contact/
-    - name: Blog
-      link: /blog/
 - title: Social
   links:
     - name: Facebook
